@@ -882,15 +882,15 @@ const github = __webpack_require__(469);
 
 try {
 // throw( new Error("some error message"));
-const name = core.getInput('who-to-greet');
+const name = core.getInput("who-to-greet");
 console.log('Hello ${name}');
 
 const time = new Date();
 core.setOutput("time", time.toTimeString());
 
-console.log(JSON.stringify(github, null, '\t'));
-} catch(error){
-
+console.log(JSON.stringify(github, null, "\t"));
+} catch (error)
+{
 core.setFailed(error.message);
 }
 
