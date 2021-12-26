@@ -3,12 +3,12 @@ author: Daniel Rodas
 description: Some description
 inputs:
   who-to-greet:
-    description: 'Who to greet'
+    description: "Who to greet"
     required: true
     default: Daniel
 outputs:
   time:
-    description: 'The greeting time'
+    description: "The greeting time"
 runs:
   using: "node12"
   main: "dist/index.js"
