@@ -9,17 +9,17 @@ jobs:
         with:
           slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
           message: Hello Slack
-      # - uses: ./.github/actions/issue
-      #   id: issue
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     title: Title
-      #     body: Body
-      #     assignees: |
-      #       danielangelrs
-      #       dannyrodas91
-      # - run: |
-      #     echo ${{ steps.issue.outputs.issue }}
+      - uses: danielangelrs/open-issue@v1
+        id: issue
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Title
+          body: Body
+          assignees: |
+            danielangelrs
+            dannyrodas91
+      - run: |
+          echo ${{ steps.issue.outputs.issue }}
           
       - uses: ./.github/actions/hello-docker
         id: hello
