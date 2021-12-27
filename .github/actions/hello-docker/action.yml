@@ -10,5 +10,8 @@ outputs:
   time:
     description: "The greeting time"
 runs:
-  using: "node12"
-  main: "dist/index.js"
+  using: "docker"
+  image: "Dockerfile"
+  # entrypoint: 
+  args:
+    - ${{ inputs.who-to-greet }}
