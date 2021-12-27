@@ -3,7 +3,7 @@
 require_once 'vendor/autoload.php';
 Requests::register_autoloader();
 
-echo "::debug ::Sending a request to slack"\n;
+echo "::debug ::Sending a request to slack\n";
 
 $response = Requests::post(
     $_ENV ["INPUT_SLACK_WEBHOOK"],
